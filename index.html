@@ -110,15 +110,30 @@ h2 {
 
 </div>
 
+
 <script>
-function copyText(element, text) {
-    navigator.clipboard.writeText(text).then(function() {
-        element.innerText = "Copied!";
-        setTimeout(() => {
-            element.innerText = text + " ⧉";
-        }, 1200);
-    });
-}
+document.querySelectorAll('.hex').forEach(el => {
+  el.addEventListener('click', function () {
+    const text = el.getAttribute('data-color');
+
+    try {
+      navigator.clipboard.writeText(text);
+    } catch (err) {
+      const temp = document.createElement("input");
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand("copy");
+      document.body.removeChild(temp);
+    }
+
+    el.innerText = "Copied!";
+    
+    setTimeout(() => {
+      el.innerText = text + " ⧉";
+    }, 1000);
+  });
+});
 </script>
 
 </body>
