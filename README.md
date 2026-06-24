@@ -1,0 +1,1 @@
+# lsc-color-tool
