@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LSC Brand Colors</title>
+
+<style>
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+h2 {
+    color: #00409a;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 180px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 12px;
+    text-align: center;
+}
+
+.swatch {
+    height: 90px;
+    border-radius: 4px;
+}
+
+.name {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.details {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.hex {
+    margin-top: 8px;
+    padding: 6px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hex:hover {
+    background: #e0eaff;
+}
+
+.copied {
+    color: green;
+    font-size: 12px;
+    margin-top: 4px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>LSC Brand Colors</h2>
+<p>Click any HEX value to copy.</p>
+
+<div class="container">
+
+<!-- BLUE -->
+<div class="card">
+  <div class="swatch" style="background:#00409a"></div>
+  <div class="name">Blue</div>
+  <div class="details">R: 0, G: 64, B: 154</div>
+  <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
+  <div class="hex" onclick="copyText(this, '#00409a')">#00409a ⧉</div>
+</div>
+
+<!-- GREEN -->
+<div class="card">
+  <div class="swatch" style="background:#6faf3e"></div>
+  <div class="name">Green</div>
+  <div class="details">R: 111, G: 175, B: 62</div>
+  <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
+  <div class="hex" onclick="copyText(this, '#6faf3e')">#6faf3e ⧉</div>
+</div>
+
+<!-- DARK GREY -->
+<div class="card">
+  <div class="swatch" style="background:#767474"></div>
+  <div class="name">Dark Grey</div>
+  <div class="details">R: 118, G: 116, B: 116</div>
+  <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
+  <div class="hex" onclick="copyText(this, '#767474')">#767474 ⧉</div>
+</div>
+
+<!-- LIGHT GREY -->
+<div class="card">
+  <div class="swatch" style="background:#b2b2b2"></div>
+  <div class="name">Light Grey</div>
+  <div class="details">R: 178, G: 178, B: 178</div>
+  <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
+  <div class="hex" onclick="copyText(this, '#b2b2b2')">#b2b2b2 ⧉</div>
+</div>
+
+<!-- BLACK -->
+<div class="card">
+  <div class="swatch" style="background:#000000"></div>
+  <div class="name">Black</div>
+  <div class="details">R: 0, G: 0, B: 0</div>
+  <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
+  <div class="hex" onclick="copyText(this, '#000000')">#000000 ⧉</div>
+</div>
+
+</div>
+
+<script>
+function copyText(element, text) {
+    navigator.clipboard.writeText(text).then(function() {
+        element.innerText = "Copied!";
+        setTimeout(() => {
+            element.innerText = text + " ⧉";
+        }, 1200);
+    });
+}
+</script>
+
+</body>
+</html>
