@@ -1,65 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LSC Brand Colors</title>
 
 <style>
-body {
+  body {
     font-family: Segoe UI, Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
     padding: 20px;
-}
+  }
 
-h2 {
+  h2 {
     color: #00409a;
-}
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
 
-.container {
+  p {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 14px;
+  }
+
+  .container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-}
+  }
 
-.card {
+  .card {
     width: 180px;
-    background: white;
+    background: #ffffff;
     border-radius: 6px;
     padding: 12px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  }
 
-.swatch {
+  .swatch {
     height: 90px;
     border-radius: 4px;
-}
+    margin-bottom: 10px;
+  }
 
-.name {
+  .name {
     font-weight: 600;
-    margin-top: 8px;
-}
+    margin-bottom: 6px;
+  }
 
-.details {
+  .details {
     font-size: 12px;
-    margin-top: 4px;
-}
+    line-height: 1.35;
+    margin-top: 3px;
+  }
 
-.hex {
-    margin-top: 8px;
-    padding: 6px;
+  .hex {
+    margin-top: 10px;
+    padding: 7px 6px;
     background: #f0f0f0;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
-}
+    font-weight: 700;
+    user-select: none;
+  }
 
-.hex:hover {
+  .hex:hover {
     background: #e6efff;
-}
-</style>
+  }
 
+  .hex.success {
+    background: #dff6dd;
+    color: #107c10;
+  }
+
+  .hex.blocked {
+    background: #fde7e9;
+    color: #a4262c;
+  }
+</style>
 </head>
 
 <body>
@@ -69,78 +90,82 @@ h2 {
 
 <div class="container">
 
-<!-- BLUE -->
-<div class="card">
-  <div class="swatch" style="background:#00409a"></div>
-  <div class="name">Blue</div>
-  <div class="details">R: 0, G: 64, B: 154</div>
-  <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
-  <div class="hex" data-color="#00409a">#00409a ⧉</div>
-</div>
+  <!-- Blue -->
+  <div class="card">
+    <div class="swatch" style="background:#00409a;"></div>
+    <div class="name">Blue</div>
+    <div class="details">R: 0, G: 64, B: 154</div>
+    <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
+    <div class="hex" data-color="#00409a">#00409a ⧉</div>
+  </div>
 
-<!-- GREEN -->
-<div class="card">
-  <div class="swatch" style="background:#6faf3e"></div>
-  <div class="name">Green</div>
-  <div class="details">R: 111, G: 175, B: 62</div>
-  <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
-  <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
-</div>
+  <!-- Green -->
+  <div class="card">
+    <div class="swatch" style="background:#6faf3e;"></div>
+    <div class="name">Green</div>
+    <div class="details">R: 111, G: 175, B: 62</div>
+    <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
+    <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
+  </div>
 
-<!-- DARK GREY -->
-<div class="card">
-  <div class="swatch" style="background:#767474"></div>
-  <div class="name">Dark Grey</div>
-  <div class="details">R: 118, G: 116, B: 116</div>
-  <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
-  <div class="hex" data-color="#767474">#767474 ⧉</div>
-</div>
+  <!-- Dark Grey -->
+  <div class="card">
+    <div class="swatch" style="background:#767474;"></div>
+    <div class="name">Dark Grey</div>
+    <div class="details">R: 118, G: 116, B: 116</div>
+    <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
+    <div class="hex" data-color="#767474">#767474 ⧉</div>
+  </div>
 
-<!-- LIGHT GREY -->
-<div class="card">
-  <div class="swatch" style="background:#b2b2b2"></div>
-  <div class="name">Light Grey</div>
-  <div class="details">R: 178, G: 178, B: 178</div>
-  <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
-  <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
-</div>
+  <!-- Light Grey -->
+  <div class="card">
+    <div class="swatch" style="background:#b2b2b2;"></div>
+    <div class="name">Light Grey</div>
+    <div class="details">R: 178, G: 178, B: 178</div>
+    <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
+    <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
+  </div>
 
-<!-- BLACK -->
-<div class="card">
-  <div class="swatch" style="background:#000000"></div>
-  <div class="name">Black</div>
-  <div class="details">R: 0, G: 0, B: 0</div>
-  <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
-  <div class="hex" data-color="#000000">#000000 ⧉</div>
-</div>
+  <!-- Black -->
+  <div class="card">
+    <div class="swatch" style="background:#000000;"></div>
+    <div class="name">Black</div>
+    <div class="details">R: 0, G: 0, B: 0</div>
+    <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
+    <div class="hex" data-color="#000000">#000000 ⧉</div>
+  </div>
 
 </div>
 
 <script>
-document.querySelectorAll('.hex').forEach(el => {
-  const originalText = el.innerText;
+  document.querySelectorAll(".hex").forEach(function (el) {
+    const originalText = el.innerText;
 
-  el.addEventListener('click', function () {
-    const text = this.getAttribute('data-color');
+    el.addEventListener("click", async function () {
+      const text = el.getAttribute("data-color");
 
-    try {
-      navigator.clipboard.writeText(text);
-    } catch (err) {
-      const temp = document.createElement("input");
-      temp.value = text;
-      document.body.appendChild(temp);
-      temp.select();
-      document.execCommand("copy");
-      document.body.removeChild(temp);
-    }
+      try {
+        await navigator.clipboard.writeText(text);
 
-    this.innerText = "Copied!";
+        el.innerText = "Copied!";
+        el.classList.remove("blocked");
+        el.classList.add("success");
 
-    setTimeout(() => {
-      this.innerText = originalText;
-    }, 1000);
+      } catch (err) {
+        console.error("Browser blocked clipboard write:", err);
+
+        el.innerText = "Copy blocked";
+        el.classList.remove("success");
+        el.classList.add("blocked");
+      }
+
+      setTimeout(function () {
+        el.innerText = originalText;
+        el.classList.remove("success");
+        el.classList.remove("blocked");
+      }, 1500);
+    });
   });
-});
 </script>
 
 </body>
