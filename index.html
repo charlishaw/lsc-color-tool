@@ -70,13 +70,10 @@ p {
     margin-top: 4px;
 }
 
-/* Plain selectable HEX (moved ABOVE clickable) */
+/* ✅ FIXED: no grey background */
 .hex-plain {
     margin-top: 6px;
     font-size: 12px;
-    background: #fafafa;
-    padding: 4px;
-    border-radius: 4px;
     user-select: text;
     cursor: text;
 }
@@ -114,57 +111,47 @@ Or highlight the value below each color and press CTRL+C.
 
 <div class="container">
 
-<!-- BLUE -->
 <div class="card">
   <div class="swatch" style="background:#00409a"></div>
   <div class="name">Blue</div>
   <div class="details">R: 0, G: 64, B: 154</div>
   <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
-
   <div class="hex-plain">#00409a</div>
   <div class="hex" data-color="#00409a">#00409a ⧉</div>
 </div>
 
-<!-- GREEN -->
 <div class="card">
   <div class="swatch" style="background:#6faf3e"></div>
   <div class="name">Green</div>
   <div class="details">R: 111, G: 175, B: 62</div>
   <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
-
   <div class="hex-plain">#6faf3e</div>
   <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
 </div>
 
-<!-- DARK GREY -->
 <div class="card">
   <div class="swatch" style="background:#767474"></div>
   <div class="name">Dark Grey</div>
   <div class="details">R: 118, G: 116, B: 116</div>
   <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
-
   <div class="hex-plain">#767474</div>
   <div class="hex" data-color="#767474">#767474 ⧉</div>
 </div>
 
-<!-- LIGHT GREY -->
 <div class="card">
   <div class="swatch" style="background:#b2b2b2"></div>
   <div class="name">Light Grey</div>
   <div class="details">R: 178, G: 178, B: 178</div>
   <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
-
   <div class="hex-plain">#b2b2b2</div>
   <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
 </div>
 
-<!-- BLACK -->
 <div class="card">
   <div class="swatch" style="background:#000000"></div>
   <div class="name">Black</div>
   <div class="details">R: 0, G: 0, B: 0</div>
   <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
-
   <div class="hex-plain">#000000</div>
   <div class="hex" data-color="#000000">#000000 ⧉</div>
 </div>
