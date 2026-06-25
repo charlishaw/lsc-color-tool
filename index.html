@@ -1,171 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LSC Brand Colors</title>
 
 <style>
-  body {
+body {
     font-family: Segoe UI, Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
     padding: 20px;
-  }
+}
 
-  h2 {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
     color: #00409a;
-    margin-top: 0;
-    margin-bottom: 8px;
-  }
+    margin: 0;
+}
 
-  p {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 14px;
-  }
+.open-btn {
+    padding: 8px 14px;
+    background: #00409a;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+}
 
-  .container {
+.open-btn:hover {
+    background: #003070;
+}
+
+p {
+    margin-top: 10px;
+}
+
+.container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
+}
 
-  .card {
+.card {
     width: 180px;
-    background: #ffffff;
+    background: white;
     border-radius: 6px;
     padding: 12px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  }
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-  .swatch {
+.swatch {
     height: 90px;
     border-radius: 4px;
-    margin-bottom: 10px;
-  }
+}
 
-  .name {
+.name {
     font-weight: 600;
-    margin-bottom: 6px;
-  }
+    margin-top: 8px;
+}
 
-  .details {
+.details {
     font-size: 12px;
-    line-height: 1.35;
-    margin-top: 3px;
-  }
+    margin-top: 4px;
+}
 
-  .hex {
-    margin-top: 10px;
-    padding: 7px 6px;
+.hex {
+    margin-top: 8px;
+    padding: 6px;
     background: #f0f0f0;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 700;
-    user-select: none;
-  }
+    font-weight: 600;
+}
 
-  .hex:hover {
+.hex:hover {
     background: #e6efff;
-  }
+}
 
-  .hex.success {
-    background: #dff6dd;
-    color: #107c10;
-  }
-
-  .hex.blocked {
-    background: #fde7e9;
-    color: #a4262c;
-  }
+/* NEW selectable line */
+.hex-plain {
+    margin-top: 6px;
+    font-size: 12px;
+    background: #fafafa;
+    padding: 4px;
+    border-radius: 4px;
+    user-select: text;
+    cursor: text;
+}
 </style>
+
 </head>
 
 <body>
 
-<h2>LSC Brand Colors</h2>
-<p>Click any HEX value to copy.</p>
+<div class="header">
+    <h2>LSC Brand Colors</h2>
+
+    <!-- OPEN WEBSITE BUTTON -->
+    <a class="open-btn" href="https://charlishaw.github.io/lsc-color-tool/" target="_blank">
+        Open Full Tool
+    </a>
+</div>
+
+<p>
+Click HEX to copy (may be limited in SharePoint).  
+Or highlight the value below each color to copy manually.
+</p>
 
 <div class="container">
 
-  <!-- Blue -->
-  <div class="card">
-    <div class="swatch" style="background:#00409a;"></div>
-    <div class="name">Blue</div>
-    <div class="details">R: 0, G: 64, B: 154</div>
-    <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
-    <div class="hex" data-color="#00409a">#00409a ⧉</div>
-  </div>
+<!-- BLUE -->
+<div class="card">
+  <div class="swatch" style="background:#00409a"></div>
+  <div class="name">Blue</div>
+  <div class="details">R: 0, G: 64, B: 154</div>
+  <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
+  <div class="hex" data-color="#00409a">#00409a ⧉</div>
+  <div class="hex-plain">#00409a</div>
+</div>
 
-  <!-- Green -->
-  <div class="card">
-    <div class="swatch" style="background:#6faf3e;"></div>
-    <div class="name">Green</div>
-    <div class="details">R: 111, G: 175, B: 62</div>
-    <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
-    <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
-  </div>
+<!-- GREEN -->
+<div class="card">
+  <div class="swatch" style="background:#6faf3e"></div>
+  <div class="name">Green</div>
+  <div class="details">R: 111, G: 175, B: 62</div>
+  <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
+  <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
+  <div class="hex-plain">#6faf3e</div>
+</div>
 
-  <!-- Dark Grey -->
-  <div class="card">
-    <div class="swatch" style="background:#767474;"></div>
-    <div class="name">Dark Grey</div>
-    <div class="details">R: 118, G: 116, B: 116</div>
-    <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
-    <div class="hex" data-color="#767474">#767474 ⧉</div>
-  </div>
+<!-- DARK GREY -->
+<div class="card">
+  <div class="swatch" style="background:#767474"></div>
+  <div class="name">Dark Grey</div>
+  <div class="details">R: 118, G: 116, B: 116</div>
+  <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
+  <div class="hex" data-color="#767474">#767474 ⧉</div>
+  <div class="hex-plain">#767474</div>
+</div>
 
-  <!-- Light Grey -->
-  <div class="card">
-    <div class="swatch" style="background:#b2b2b2;"></div>
-    <div class="name">Light Grey</div>
-    <div class="details">R: 178, G: 178, B: 178</div>
-    <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
-    <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
-  </div>
+<!-- LIGHT GREY -->
+<div class="card">
+  <div class="swatch" style="background:#b2b2b2"></div>
+  <div class="name">Light Grey</div>
+  <div class="details">R: 178, G: 178, B: 178</div>
+  <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
+  <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
+  <div class="hex-plain">#b2b2b2</div>
+</div>
 
-  <!-- Black -->
-  <div class="card">
-    <div class="swatch" style="background:#000000;"></div>
-    <div class="name">Black</div>
-    <div class="details">R: 0, G: 0, B: 0</div>
-    <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
-    <div class="hex" data-color="#000000">#000000 ⧉</div>
-  </div>
+<!-- BLACK -->
+<div class="card">
+  <div class="swatch" style="background:#000000"></div>
+  <div class="name">Black</div>
+  <div class="details">R: 0, G: 0, B: 0</div>
+  <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
+  <div class="hex" data-color="#000000">#000000 ⧉</div>
+  <div class="hex-plain">#000000</div>
+</div>
 
 </div>
 
 <script>
-  document.querySelectorAll(".hex").forEach(function (el) {
-    const originalText = el.innerText;
+document.querySelectorAll('.hex').forEach(el => {
+  const originalText = el.innerText;
 
-    el.addEventListener("click", async function () {
-      const text = el.getAttribute("data-color");
+  el.addEventListener('click', async function () {
+    const text = this.getAttribute('data-color');
 
-      try {
-        await navigator.clipboard.writeText(text);
+    try {
+      await navigator.clipboard.writeText(text);
+      this.innerText = "Copied!";
+    } catch {
+      this.innerText = "Copy blocked";
+    }
 
-        el.innerText = "Copied!";
-        el.classList.remove("blocked");
-        el.classList.add("success");
-
-      } catch (err) {
-        console.error("Browser blocked clipboard write:", err);
-
-        el.innerText = "Copy blocked";
-        el.classList.remove("success");
-        el.classList.add("blocked");
-      }
-
-      setTimeout(function () {
-        el.innerText = originalText;
-        el.classList.remove("success");
-        el.classList.remove("blocked");
-      }, 1500);
-    });
+    setTimeout(() => {
+      this.innerText = originalText;
+    }, 1000);
   });
+});
 </script>
 
 </body>
