@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LSC Brand Colors</title>
+<title>Brand Colors Library</title>
 
 <style>
 body {
@@ -40,6 +40,35 @@ p {
     margin-top: 10px;
 }
 
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    border: none;
+    background: #d9d9d9;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background: #00409a;
+    color: white;
+}
+
+.brand-section {
+    display: none;
+}
+
+.brand-section.active {
+    display: block;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +99,6 @@ p {
     margin-top: 4px;
 }
 
-/* ✅ FIXED: no grey background */
 .hex-plain {
     margin-top: 6px;
     font-size: 12px;
@@ -91,91 +119,145 @@ p {
     background: #e6efff;
 }
 </style>
-
 </head>
 
 <body>
 
+<div class="tabs">
+    <button class="tab-btn active" onclick="showBrand('lsc', this)">LSC</button>
+    <button class="tab-btn" onclick="showBrand('alairo', this)">Alairo</button>
+    <button class="tab-btn" onclick="showBrand('promobix', this)">Promobix</button>
+</div>
+
+<!-- LSC -->
+<div id="lsc" class="brand-section active">
+
 <div class="header">
     <h2>LSC Brand Colors</h2>
-
     <a class="open-btn" href="https://charlishaw.github.io/lsc-color-tool/" target="_blank">
         Open Full Tool
     </a>
 </div>
 
-<p>
-Open Full Tool to click HEX values to copy.  
-Or highlight the value below each color and press CTRL+C.
-</p>
+<p>Select a HEX value to copy it.</p>
 
 <div class="container">
 
 <div class="card">
-  <div class="swatch" style="background:#00409a"></div>
-  <div class="name">Blue</div>
-  <div class="details">R: 0, G: 64, B: 154</div>
-  <div class="details">C: 100, M: 86, Y: 6, K: 1</div>
-  <div class="hex-plain">#00409a</div>
-  <div class="hex" data-color="#00409a">#00409a ⧉</div>
+<div class="swatch" style="background:#00409a"></div>
+<div class="name">Blue</div>
+<div class="details">R: 0, G: 64, B: 154</div>
+<div class="details">C: 100, M: 86, Y: 6, K: 1</div>
+<div class="hex-plain">#00409a</div>
+<div class="hex" data-color="#00409a">#00409a ⧉</div>
 </div>
 
 <div class="card">
-  <div class="swatch" style="background:#6faf3e"></div>
-  <div class="name">Green</div>
-  <div class="details">R: 111, G: 175, B: 62</div>
-  <div class="details">C: 63, M: 9, Y: 100, K: 1</div>
-  <div class="hex-plain">#6faf3e</div>
-  <div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
+<div class="swatch" style="background:#6faf3e"></div>
+<div class="name">Green</div>
+<div class="details">R: 111, G: 175, B: 62</div>
+<div class="details">C: 63, M: 9, Y: 100, K: 1</div>
+<div class="hex-plain">#6faf3e</div>
+<div class="hex" data-color="#6faf3e">#6faf3e ⧉</div>
 </div>
 
 <div class="card">
-  <div class="swatch" style="background:#767474"></div>
-  <div class="name">Dark Grey</div>
-  <div class="details">R: 118, G: 116, B: 116</div>
-  <div class="details">C: 55, M: 47, Y: 47, K: 12</div>
-  <div class="hex-plain">#767474</div>
-  <div class="hex" data-color="#767474">#767474 ⧉</div>
+<div class="swatch" style="background:#767474"></div>
+<div class="name">Dark Grey</div>
+<div class="details">R: 118, G: 116, B: 116</div>
+<div class="details">C: 55, M: 47, Y: 47, K: 12</div>
+<div class="hex-plain">#767474</div>
+<div class="hex" data-color="#767474">#767474 ⧉</div>
 </div>
 
 <div class="card">
-  <div class="swatch" style="background:#b2b2b2"></div>
-  <div class="name">Light Grey</div>
-  <div class="details">R: 178, G: 178, B: 178</div>
-  <div class="details">C: 31, M: 25, Y: 25, K: 0</div>
-  <div class="hex-plain">#b2b2b2</div>
-  <div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
+<div class="swatch" style="background:#b2b2b2"></div>
+<div class="name">Light Grey</div>
+<div class="details">R: 178, G: 178, B: 178</div>
+<div class="details">C: 31, M: 25, Y: 25, K: 0</div>
+<div class="hex-plain">#b2b2b2</div>
+<div class="hex" data-color="#b2b2b2">#b2b2b2 ⧉</div>
 </div>
 
 <div class="card">
-  <div class="swatch" style="background:#000000"></div>
-  <div class="name">Black</div>
-  <div class="details">R: 0, G: 0, B: 0</div>
-  <div class="details">C: 0, M: 0, Y: 0, K: 100</div>
-  <div class="hex-plain">#000000</div>
-  <div class="hex" data-color="#000000">#000000 ⧉</div>
+<div class="swatch" style="background:#000000"></div>
+<div class="name">Black</div>
+<div class="details">R: 0, G: 0, B: 0</div>
+<div class="details">C: 0, M: 0, Y: 0, K: 100</div>
+<div class="hex-plain">#000000</div>
+<div class="hex" data-color="#000000">#000000 ⧉</div>
 </div>
 
+</div>
+</div>
+
+<!-- ALAIRO -->
+<div id="alairo" class="brand-section">
+
+<h2>Alairo Brand Colors</h2>
+<p>Select a HEX value to copy it.</p>
+
+<div class="container">
+
+<div class="card"><div class="swatch" style="background:#072862"></div><div class="name">Navy Blue</div><div class="details">R: 7, G: 40, B: 98</div><div class="details">C: 100, M: 84, Y: 7, K: 43</div><div class="hex-plain">#072862</div><div class="hex" data-color="#072862">#072862 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#7795bd"></div><div class="name">Light Blue</div><div class="details">R: 119, G: 149, B: 189</div><div class="details">C: 56, M: 35, Y: 10, K: 0</div><div class="hex-plain">#7795bd</div><div class="hex" data-color="#7795bd">#7795bd ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#786f70"></div><div class="name">Dark Grey</div><div class="details">R: 120, G: 111, B: 112</div><div class="details">C: 53, M: 51, Y: 47, K: 14</div><div class="hex-plain">#786f70</div><div class="hex" data-color="#786f70">#786f70 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#e25027"></div><div class="name">Orange</div><div class="details">R: 226, G: 80, B: 39</div><div class="details">C: 7, M: 84, Y: 100, K: 0</div><div class="hex-plain">#e25027</div><div class="hex" data-color="#e25027">#e25027 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#000000"></div><div class="name">Black</div><div class="details">R: 0, G: 0, B: 0</div><div class="details">C: 0, M: 0, Y: 0, K: 100</div><div class="hex-plain">#000000</div><div class="hex" data-color="#000000">#000000 ⧉</div></div>
+
+</div>
+</div>
+
+<!-- PROMOBIX -->
+<div id="promobix" class="brand-section">
+
+<h2>Promobix Brand Colors</h2>
+<p>Select a HEX value to copy it.</p>
+
+<div class="container">
+
+<div class="card"><div class="swatch" style="background:#000000"></div><div class="name">Black</div><div class="details">R:0 G:0 B:0</div><div class="details">C:0 M:0 Y:0 K:100</div><div class="hex-plain">#000000</div><div class="hex" data-color="#000000">#000000 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#1f1747"></div><div class="name">Dark Navy</div><div class="details">R:31 G:23 B:71</div><div class="details">C:98 M:98 Y:37 K:44</div><div class="hex-plain">#1f1747</div><div class="hex" data-color="#1f1747">#1f1747 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#6b2ed9"></div><div class="name">Purple</div><div class="details">R:107 G:46 B:217</div><div class="details">C:72 M:80 Y:0 K:0</div><div class="hex-plain">#6b2ed9</div><div class="hex" data-color="#6b2ed9">#6b2ed9 ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#e8693d"></div><div class="name">Orange</div><div class="details">R:232 G:105 B:61</div><div class="details">C:4 M:73 Y:84 K:0</div><div class="hex-plain">#e8693d</div><div class="hex" data-color="#e8693d">#e8693d ⧉</div></div>
+
+<div class="card"><div class="swatch" style="background:#a6a6a6"></div><div class="name">Light Grey</div><div class="details">R:166 G:166 B:166</div><div class="details">C:37 M:30 Y:31 K:0</div><div class="hex-plain">#a6a6a6</div><div class="hex" data-color="#a6a6a6">#a6a6a6 ⧉</div></div>
+
+</div>
 </div>
 
 <script>
-document.querySelectorAll('.hex').forEach(el => {
-  const originalText = el.innerText;
+function showBrand(id, btn) {
+    document.querySelectorAll('.brand-section').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
 
-  el.addEventListener('click', async function () {
-    const text = this.getAttribute('data-color');
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+}
 
-    try {
-      await navigator.clipboard.writeText(text);
-      this.innerText = "Copied!";
-    } catch {
-      this.innerText = "Copy blocked";
+document.addEventListener('click', async function(e){
+    if(e.target.classList.contains('hex')){
+        const text = e.target.dataset.color;
+        const original = e.target.innerText;
+
+        try{
+            await navigator.clipboard.writeText(text);
+            e.target.innerText = 'Copied!';
+        }catch{
+            e.target.innerText = 'Copy blocked';
+        }
+
+        setTimeout(()=>{
+            e.target.innerText = original;
+        },1000);
     }
-
-    setTimeout(() => {
-      this.innerText = originalText;
-    }, 1000);
-  });
 });
 </script>
 
